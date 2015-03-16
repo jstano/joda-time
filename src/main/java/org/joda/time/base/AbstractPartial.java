@@ -375,6 +375,24 @@ public abstract class AbstractPartial
         return compareTo(partial) < 0;
     }
 
+    public boolean isOnOrAfter(ReadablePartial var1) {
+        if (var1 == null) {
+            throw new IllegalArgumentException("Partial cannot be null");
+        }
+        else {
+            return this.compareTo(var1) >= 0;
+        }
+    }
+
+    public boolean isOnOrBefore(ReadablePartial var1) {
+        if (var1 == null) {
+            throw new IllegalArgumentException("Partial cannot be null");
+        }
+        else {
+            return this.compareTo(var1) <= 0;
+        }
+    }
+
     /**
      * Is this partial the same as the specified partial.
      * <p>
